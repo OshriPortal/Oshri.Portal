@@ -1,0 +1,88 @@
+:root{
+        --navy-blue: rgba(3, 4, 94, 1);
+        --star-command-blue: rgba(0, 119, 182, 1);
+        --cerulean-crayola: rgba(0, 180, 216, 1);
+        --sky-blue-crayola: rgb(144, 224, 239);
+        --powder-blue: rgba(202, 240, 248, 1);
+}
+
+* {
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr 1fr;
+  gap: 1% 1%;
+  grid-template-areas:
+    "header header header"
+    "about imag info"
+    "timeline Career Career"
+    "contact contact contact";
+}
+
+
+        .header {
+            grid-area: header;
+            text-align: center;
+            background-color: powderblue;
+            border: 1px solid black;
+        }
+
+        .about {
+            grid-area: about;
+            background-color: powderblue;
+            border: 1px solid black;
+        }
+
+        .imag {
+            grid-area: imag;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .info {
+            grid-area: info;
+            background-color: powderblue;
+            border: 1px solid black;
+        }
+
+        .timeline {
+            grid-area: timeline;
+            background-color: powderblue;
+            border: 1px solid black;
+        }
+
+        .career {
+            grid-area: Career;
+            background-color: powderblue;
+            border: 1px solid black;
+        }
+
+        .contact {
+            grid-area: contact;
+            font-weight: bold;
+            background-color: powderblue;
+            border: 1px solid black;
+        }
+
+
+        input[type=text], select,  input{
+          width: 15%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          resize: vertical;
+        }
+         textarea{
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          resize: vertical;
+        }
