@@ -2,36 +2,97 @@
 <html lang="en">
 
     <head>
-        <title>CV exercise 5</title>
+        <title>CV Oshri Portal</title>
         <link rel="stylesheet" href="cv.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="cv.js"></script>
     </head>
 
     <body>
-    <img src= BGU.jpg width=100% height="200" alt="" T="BGU" >
         <div class="grid-container">
 
-            <div class="header" style="font-size:10vw"> CV- Oshri Portal </div>
+            <div class="header">
+                <h3><button onclick="darkMode()"style="width:10%">dark mode</button></h3>
+            CV - Oshri Portal
+            </div>
 
-            <div class="about"> about </div>
-            <div class="imag"> <img src= me.jpg width="250" height="250" alt="me" T="me" > </div>
-            <div class="info"> info </div>
-            <div class="timeline">timeline </div>
-            <div class="career">Career </div>
+            <div class="about"> <br> about me <br><br> I am a student of industrial engineering and management, at Ben-Gurion University of the Negev. <br> ... </div>
+
+            <div class="imag"> <img src= me.jpg width=100% height=100% alt="me" T="me" > </div>
+
+            <div class="info"><br> Name: Oshri Portal <br><br> Age: 27 <br><br> Location: Be'er-Sheva,Israel <br><br>
+            Email: portalo@post.bgu.ac.il <br><br> Phone: 052-2882744</div>
+
+            <div class="timeline">
+                <div class="container right">
+                    <div class="content">
+                      <h2>2019-2021</h2>
+                      <p>Student at "BGU"</p>
+                    </div>
+                  </div>
+                  <div class="container right">
+                    <div class="content">
+                      <h2>2018</h2>
+                      <p>Worker at "Intel"</p>
+                    </div>
+                  </div>
+                <div class="container right">
+                    <div class="content">
+                      <h2>2017</h2>
+                      <p>Traveling in South America</p>
+                    </div>
+                  </div>
+                <div class="container right">
+                    <div class="content">
+                      <h2>2012-2016</h2>
+                      <p>Navy service</p>
+                    </div>
+                  </div>
+                 <div class="container right">
+                    <div class="content">
+                      <h2>2009-2011</h2>
+                      <p>High school "HaKirya"</p>
+                    </div>
+                  </div>
+            </div>
+
+
+
+            <div class="career">
+                <h1>Career </h1>
+                <img src= navy.jfif width=18% height=10% alt="navy" >
+                military service: <br>...<br>
+                <img src= Intel.png width=20% height=8% alt="Intel" >
+                Work at Intel: <br>...<br>
+                <img src= bgulogo.jpg width=15% height=8% alt="BGU" >
+                Studies at the University: <br>...<br><br><br>
+                <br>Download cv file <br>
+                <a href="cv%20file.docx" download >
+                <img src="Download.jpg"  width=10% height=5% alt="cv-file">
+                </a>
+            </div>
 
             <div class="contact">
-                contact me
-            <form style="background-color: powderblue">
-              <label style="background-color: powderblue" for="name">name:</label><br>
+                contact me: <br><br>
+            <form style="background-color: transparent">
+              <label style="background-color: transparent" for="name">name</label><br>
                 <input type="text" id="name" name="name"><br>
-              <label style="background-color: powderblue" for="email">E-mail</label><br>
+              <label style="background-color: transparent" for="email">E-mail</label><br>
                 <input type="email" id="email" name="email"><br>
-              <label style="background-color: powderblue" for="Comment">Comment</label><br>
+              <label style="background-color: transparent" for="Comment">Comment</label><br>
               <textarea id="comment" name="comment" cols=50% rows="2"></textarea><br><br>
               <input type="submit" value="Submit">
             </form>
-            </div>
+                <br><br>
+                <a href="https://www.linkedin.com/">
+                <img src="LinkedIn.png" alt="HTML tutorial" style="width:3%;height:8%;">
+                </a>
+                 <a href="https://www.facebook.com/">
+                <img src="facebook.png" alt="HTML tutorial" style="width:3%;height:8%;">
+                </a> <br>
+                <button onclick="topFunction()" style="width:10%" id="topFunction" title="Back to top">Back to top</button>
 
+            </div>
         </div>
     </body>
 </html>
