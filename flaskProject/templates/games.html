@@ -1,0 +1,42 @@
+{% extends "assignment8.html" %}
+
+{% block flipBox %}
+    <h5>my favorite games</h5>
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <img src=/static/img/fifa.webp width=100% height=100% alt="FIFA">
+            </div>
+            <div class="flip-box-back">
+                <h1>{{ games[0] | upper }}</h1>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <img src=/static/img/billiard.jpg width=100% height=100% alt="billiard">
+            </div>
+            <div class="flip-box-back">
+                <h1>{{ games[1]| upper }}</h1>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <img src=/static/img/beerpong.jpg width=100% height=100% alt="beer pong">
+            </div>
+            <div class="flip-box-back">
+                <h1>{{ games[2]| upper }}</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+            <a href="{{ url_for('assignment8') }}"><h2>go to my hobbies</h2></a>
+
+{% endblock %}

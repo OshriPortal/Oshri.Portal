@@ -1,0 +1,250 @@
+
+:root {
+    --navy-blue: rgba(3, 4, 94, 1);
+    --star-command-blue: rgba(0, 119, 182, 1);
+    --cerulean-crayola: rgba(0, 180, 216, 1);
+    --sky-blue-crayola: rgb(144, 224, 239);
+    --powder-blue: rgba(202, 240, 248, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 0.7fr 2.8fr 1fr;
+    gap: 0% 0%;
+    grid-template-areas:
+    "header header header"
+    "about imag info"
+    "timeline Career Career"
+    "contact contact contact";
+}
+
+h1 {
+    text-align: center;
+    font-style: oblique;
+    color: white;
+    font-size: 4vw;
+    background-color: #02131c;
+}
+
+h4{
+    margin: auto;
+    font-size: 4.5vw;
+}
+
+
+
+
+h3 {
+    text-align: left;
+    font-style: oblique;
+    color: transparent;
+    font-size: 0%;
+    background-color: transparent;
+}
+
+
+.header {
+    background-image: url("../img/cover.jpg");
+    background-size: 100% 100%;
+    grid-area: header;
+    text-align: center;
+    font-style: oblique;
+    color: white;
+    font-size: 7vw;
+    background-color: #02131c;
+    border: 1px solid transparent;
+}
+
+.about {
+    grid-area: about;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    background-color: #02131c;
+    border: 1px solid transparent;
+}
+
+.imag {
+    text-align: center;
+    grid-area: imag;
+    background-color: #02131c;
+    border: 1px solid transparent;
+}
+
+.info {
+    grid-area: info;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    background-color: #02131c;
+    border: 1px solid transparent;
+}
+
+.timeline {
+    grid-area: timeline;
+    background-color: #02131c;
+    position: relative;
+    max-width: 100%;
+    border: 1px solid transparent;
+}
+
+.career {
+    grid-area: Career;
+    color: white;
+    text-align: center;
+    font-size: 3.5vw;
+    background-color: #02131c;
+    border: 1px solid transparent;
+}
+
+.contact {
+    background-image: url("../img/contact.jpg");
+    background-size: 100% 100%;
+    grid-area: contact;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    background-color: #02131c;
+    border: 1px solid transparent;
+}
+
+
+input[type=text], select, input {
+    width: 15%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+
+/* The timeline  */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 1%;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    margin-left: -1%;
+}
+
+/* Container around content */
+.container {
+    padding: 5% 4%;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    margin-left: -10%;
+}
+
+/* The circles */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 18%;
+    height: 15%;
+    left: 15%;
+    background-color: white;
+    border: 4px solid var(--star-command-blue);
+    top: 10%;
+    border-radius: 50%;
+    margin-left: -12%;
+}
+
+.right {
+    left: 40%;
+}
+
+
+/* arrows */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 15%;
+    width: 0;
+    z-index: 1;
+    left: 1%;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -10%;
+}
+
+/* The content */
+.content {
+    padding: 20% 30%;
+    background-color: white;
+    position: relative;
+    border-radius: 10%;
+}
+
+
+.dark-mode {
+    background-color: black;
+}
+
+.dark-mode .career {
+    background-color: black;
+    filter: brightness(75%);
+}
+
+.dark-mode .header {
+    filter: brightness(55%);
+}
+
+.dark-mode .info {
+    background-color: black;
+    filter: brightness(75%);
+
+}
+
+.dark-mode .about {
+    background-color: black;
+    filter: brightness(75%);
+
+}
+
+.dark-mode .timeline {
+    background-color: black;
+    filter: brightness(45%);
+}
+
+.dark-mode h1 {
+    background-color: black;
+}
+
+.dark-mode .header {
+    color: black;
+}
+
+.dark-mode .imag {
+    filter: brightness(25%);
+}
+
+.dark-mode .contact {
+    filter: brightness(55%);
+}
+
