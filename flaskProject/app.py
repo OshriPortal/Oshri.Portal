@@ -49,16 +49,14 @@ def assignment9():
     current_method = request.method
     if 'username' in session:
         user_name, name, lastname, email = session['username'], '', '', ''
-    else:
-        if request.method == 'GET':
-            print('get')
-            if 'name' in request.args:
-                name = request.args['name']
-                lastname = request.args['lastname']
-                email = request.args['email']
-                user_name = ''
-            else:
-                user_name, name, lastname, email = '', '', '', ''
+    if request.method == 'GET':
+        print('get')
+        if 'name' in request.args:
+            name = request.args['name']
+            lastname = request.args['lastname']
+            email = request.args['email']
+        else:
+            name, lastname, email = '', '', ''
     if request.method == 'GET':
         print('post')
         if 'username' in request.args:
@@ -67,7 +65,7 @@ def assignment9():
             password = request.args['password']
             email = request.args['email']
         else:
-            user_name = ''
+            user_name, email = '', ''
     return render_template('assignment9.html',
                            user_name=user_name,
                            name=name,
@@ -82,6 +80,7 @@ def assignment9():
 def log_out():
     session['username'] = ''
     return redirect(url_for('assignment9'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
