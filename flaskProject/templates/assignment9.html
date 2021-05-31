@@ -1,0 +1,56 @@
+{% extends "assignment8.html" %}
+
+
+{% block flipBox %}
+
+    <div>
+        <h5>Search & Registration</h5>
+        {% if not session['username'] %}
+            <form action=/assignment9 method=“GET”>
+                <h1 style="color: black">registration</h1>
+                <input name="username" type="text" placeholder="username">
+                <br>
+                <input name="password" type="password" placeholder="password">
+                <br>
+                <input name="email" type="email" placeholder="email">
+                <br>
+                <input TYPE="submit" value="Submit">
+            </form>
+        {% else %}
+            <form action=/logout method=“GET”>
+            <button TYPE="submit" value="log out">log-out
+            </button>
+            </form>
+        {% endif %}
+
+        <form action=/assignment9 method=“GET”>
+            <h1 style="color: black">search</h1>
+            <input name="name" type="text" placeholder="firstname">
+            <br>
+            <input name="lastname" type="text" placeholder="lastname">
+            <br>
+            <input name="email" type="email" placeholder="email">
+            <br>
+            <input TYPE="submit" value="Submit">
+        </form>
+
+        {% for user in users %}
+            {% if name == user.firstname or lastname == user.lastname or email == user.email %}
+                <h1 style="color: black">User:<br>
+                    {{ user.firstname }}<br>
+                    {{ user.lastname }}<br>
+                    {{ user.email }}<br>
+                </h1>
+            {% elif name == '' and lastname == '' and email == '' %}
+                <h1 style="color: black">User:<br>
+                    {{ user.firstname }}<br>
+                    {{ user.lastname }}<br>
+                    {{ user.email }}<br>
+                </h1>
+            {% endif %}
+        {% endfor %}
+
+
+    </div>
+
+{% endblock %}

@@ -6,19 +6,24 @@
     <link rel="stylesheet" href="/static/css/hobbies.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/static/js/cv.js"></script>
-    <title>assignment8</title>
+    <title>{{ assignment }}</title>
 </head>
 
 <body>
 <div class="grid-container">
 
-    <div class="hobby">
+    <div class="main">
+        {% if session['username'] %}
+            <h7 style="color: black">Logged-in, {{ session['username'] }}</h7>
+        {% endif %}
         {% block flipBox %}
             <h5>my hobbies</h5>
             {% if contact_user %}
-                <h1 style="color: #02131c">hello {{ contact_user.firstname }} {{ contact_user.lastname }}, if you share with me one of my hobbies contact me and join me</h1>
+                <h1 style="color: #02131c">hello {{ contact_user.firstname }} {{ contact_user.lastname }}, if you share
+                    with me one of my hobbies contact me and join me</h1>
             {% else %}
-                <h1 style="color: #02131c">hello stranger, if you share with me one of my hobbies contact me and join me</h1>
+                <h1 style="color: #02131c">hello stranger, if you share with me one of my hobbies contact me and join
+                    me</h1>
             {% endif %}
             <div class="flip-box">
                 <div class="flip-box-inner">
