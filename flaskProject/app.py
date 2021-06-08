@@ -1,8 +1,11 @@
 from flask import Flask, redirect, url_for, render_template, request, session
+import mysql.connector
 
 app = Flask(__name__)
 app.secret_key = '1234'
 
+from assignment10.assignment10 import assignment10_blueprint
+app.register_blueprint(assignment10_blueprint)
 
 @app.route('/main', methods=['PUT', 'POST', 'GET', 'DELETE'])
 @app.route('/', methods=['PUT', 'POST', 'GET', 'DELETE'])
@@ -50,14 +53,6 @@ def assignment9():
     if 'username' in session:
         user_name, name, lastname, email = session['username'], '', '', ''
     if request.method == 'GET':
-        print('get')
-        if 'name' in request.args:
-            name = request.args['name']
-            lastname = request.args['lastname']
-            email = request.args['email']
-        else:
-            name, lastname, email = '', '', ''
-    if request.method == 'GET':
         print('post')
         if 'username' in request.args:
             user_name = request.args['username']
@@ -65,7 +60,15 @@ def assignment9():
             password = request.args['password']
             email = request.args['email']
         else:
-            user_name, email = '', ''
+            user_name = ''
+    if request.method == 'GET':
+        print('get')
+        if 'name' in request.args:
+            name = request.args['name']
+            lastname = request.args['lastname']
+            email = request.args['email']
+        else:
+            name, lastname, email = '', '', ''
     return render_template('assignment9.html',
                            user_name=user_name,
                            name=name,

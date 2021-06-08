@@ -1,0 +1,62 @@
+{% extends "assignment8.html" %}
+
+{% block flipBox %}
+    <div>
+        <h5>USER'S</h5>
+        <form action=/insert_user method=“GET”>
+            <h1 style="color: black">Registration</h1>
+            <input name="username" type="text" placeholder="username">
+            <br>
+            <input name="firstname" type="text" placeholder="firstname">
+            <br>
+            <input name="lastname" type="text" placeholder="lastname">
+            <br>
+            <input name="email" type="email" placeholder="email">
+            <br>
+            <input name="password" type="password" placeholder="password">
+            <br>
+            <input TYPE="submit" value="Submit">
+        </form>
+
+        <form action=/update_user method=“GET”>
+            <h1 style="color: black">Update</h1>
+            <input name="id" type="text" placeholder="id">
+            <br>
+            <input name="username" type="text" placeholder="username">
+            <br>
+            <input name="firstname" type="text" placeholder="firstname">
+            <br>
+            <input name="lastname" type="text" placeholder="lastname">
+            <br>
+            <input name="email" type="email" placeholder="email">
+            <br>
+            <input name="password" type="password" placeholder="password">
+            <br>
+            <input TYPE="submit" value="Submit">
+        </form>
+
+        <form action=/delete_user method=“GET”>
+            <h1 style="color: black">Delete</h1>
+            <input name="id" type="text" placeholder="id">
+            <br>
+            <input name="password" type="password" placeholder="password">
+            <br>
+            <input TYPE="submit" value="Submit">
+        </form>
+
+        <h1 style="color: #080839; font-size:77px ">List of users</h1>
+        {% for user in users %}
+            <h1 style="color: #080839">User:<br>
+                id- {{ user.id }}<br>
+                {{ user.user_name }}<br>
+                {{ user.first_name }}<br>
+                {{ user.last_name }}<br>
+                {{ user.email }}<br>
+            </h1>
+        {% endfor %}
+
+
+    </div>
+
+
+{% endblock %}
