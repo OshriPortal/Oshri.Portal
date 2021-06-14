@@ -1,11 +1,13 @@
-from flask import Flask, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, url_for, render_template, request, session, jsonify
 import mysql.connector
 
 app = Flask(__name__)
 app.secret_key = '1234'
 
-from assignment10.assignment10 import assignment10_blueprint
+from assignment10.assignment10 import assignment10_blueprint, interact_db
+
 app.register_blueprint(assignment10_blueprint)
+
 
 @app.route('/main', methods=['PUT', 'POST', 'GET', 'DELETE'])
 @app.route('/', methods=['PUT', 'POST', 'GET', 'DELETE'])
@@ -48,27 +50,27 @@ def assignment9():
     users = [{'firstname': 'Michael', 'lastname': 'Lawson', 'email': "Lawson@gmail.com"},
              {'firstname': 'Dana', 'lastname': 'Dvorin', 'email': "Dana@gmail.com"},
              {'firstname': 'Dani', 'lastname': 'Din', 'email': "Dani@gmail.com"}]
-    print(request.method)
     current_method = request.method
     if 'username' in session:
         user_name, name, lastname, email = session['username'], '', '', ''
-    if request.method == 'GET':
-        print('post')
-        if 'username' in request.args:
-            user_name = request.args['username']
-            session['username'] = request.args['username']
-            password = request.args['password']
-            email = request.args['email']
+    if request.method == 'POST':
+        if 'username' in request.form:
+            user_name = request.form['username']
+            session['username'] = request.form['username']
+            password = request.form['password']
         else:
             user_name = ''
+    else:
+        user_name = ''
     if request.method == 'GET':
-        print('get')
         if 'name' in request.args:
             name = request.args['name']
             lastname = request.args['lastname']
             email = request.args['email']
         else:
             name, lastname, email = '', '', ''
+    else:
+        name, lastname, email = '', '', ''
     return render_template('assignment9.html',
                            user_name=user_name,
                            name=name,
@@ -83,6 +85,33 @@ def assignment9():
 def log_out():
     session['username'] = ''
     return redirect(url_for('assignment9'))
+
+
+@app.route('/assignment11/users', methods=['GET'])
+@app.route('/assignment11/users/', methods=['GET'])
+def assignment11():
+    query = "SELECT * FROM users";
+    query_result = interact_db(query=query, query_type='fetch')
+    response = {}
+    if len(query_result) != 0:
+        response = query_result
+    response = jsonify(response)
+    return response
+
+@app.route('/assignment11/users/selected/', defaults={'id': -1})
+@app.route('/assignment11/users/selected/<int:id>', methods=['GET'])
+def assignment11_1(id):
+    if id == -1:
+        id =1;
+    query = "SELECT * FROM users WHERE id='%s';" % id
+    query_result = interact_db(query=query, query_type='fetch')
+    response = {}
+    if len(query_result) != 0:
+        response = query_result[0]
+    else:
+        response = "-------user does not exist!-------"
+    response = jsonify(response)
+    return response
 
 
 if __name__ == '__main__':

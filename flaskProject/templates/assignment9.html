@@ -6,15 +6,13 @@
     <div>
         <h5>Search & Registration</h5>
         {% if not session['username'] %}
-            <form action=/assignment9 method=“GET”>
+            <form action=/assignment9 method=“post”>
                 <h1 style="color: black">registration</h1>
                 <input name="username" type="text" placeholder="username">
                 <br>
                 <input name="password" type="password" placeholder="password">
                 <br>
-                <input name="email" type="email" placeholder="email">
-                <br>
-                <input TYPE="submit" value="Submit">
+                <input TYPE="submit" value="Submit" formmethod="post">
             </form>
         {% else %}
             <form action=/logout method=“GET”>

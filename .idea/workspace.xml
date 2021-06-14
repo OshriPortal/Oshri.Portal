@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6dd1c766-d8b3-4033-b86d-233cbe2ccbae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flaskProject/templates/assignment11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskProject/assignment10/templates/assignment10.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskProject/assignment10/templates/assignment10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskProject/templates/assignment9.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskProject/templates/assignment9.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tQZ8CskUTTEJFBEZimDema1rNF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunConfigurationTargetLRU" value="d973bb62-e140-4eaa-8f28-92a9f5d9104d" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flaskProject2" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DatabaseScript">
+      <data-source id="d973bb62-e140-4eaa-8f28-92a9f5d9104d" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <option name="flaskDebug" value="true" />
+      <module name="Oshri.Portal" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\Oshri Portal\PycharmProjects\Oshri.Portal\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="flaskProject" type="Python.FlaskServer">
+      <option name="flaskDebug" value="true" />
+      <module name="Oshri.Portal" />
+      <option name="target" value="C:\Users\Oshri Portal\PycharmProjects\Oshri.Portal\flaskProject" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\Oshri Portal\PycharmProjects\Oshri.Portal\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskProject" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6dd1c766-d8b3-4033-b86d-233cbe2ccbae" name="Default Changelist" comment="" />
+      <created>1622703117242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622703117242</updated>
+      <workItem from="1622703121011" duration="705000" />
+      <workItem from="1622704522513" duration="117000" />
+      <workItem from="1623418148921" duration="63000" />
+      <workItem from="1623418242587" duration="89000" />
+      <workItem from="1623418363872" duration="94000" />
+      <workItem from="1623418475269" duration="91000" />
+      <workItem from="1623418578348" duration="343000" />
+      <workItem from="1623419011487" duration="616000" />
+      <workItem from="1623419752132" duration="165000" />
+      <workItem from="1623419930948" duration="426000" />
+      <workItem from="1623420371418" duration="1037000" />
+      <workItem from="1623421436118" duration="119000" />
+      <workItem from="1623423416639" duration="50000" />
+      <workItem from="1623425608500" duration="3834000" />
+      <workItem from="1623435308140" duration="660000" />
+      <workItem from="1623447829779" duration="819000" />
+      <workItem from="1623484323206" duration="765000" />
+      <workItem from="1623605937348" duration="379000" />
+      <workItem from="1623609678611" duration="139000" />
+      <workItem from="1623616074529" duration="347000" />
+      <workItem from="1623658397140" duration="409000" />
+      <workItem from="1623665890599" duration="4796000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Oshri_Portal$flaskProject.coverage" NAME="flaskProject Coverage Results" MODIFIED="1623670146720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskProject" />
+  </component>
+</project>
